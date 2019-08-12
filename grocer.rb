@@ -17,7 +17,13 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
-  if coupons.isem
+  if coupons.empty?
+    return cart
+  else
+    cart.each do |item, attributes|
+      
+    end
+  end
 end
 
 def apply_clearance(cart)
