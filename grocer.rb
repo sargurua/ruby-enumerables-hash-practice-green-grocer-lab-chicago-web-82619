@@ -3,10 +3,16 @@ def consolidate_cart(cart)
   return_hash = {}
   cart.each do |hash|
     hash.each do |item, attributes|
-      return_hash[item] = attributes
-      return_hash[count]
+      if return_hash[item]
+        return_hash[item][:count] += 1
+      
+      else
+        return_hash[item] = attributes
+        return_hash[item][:count] = 1
+      end
     end
   end
+  return return_hash
 end
 
 def apply_coupons(cart, coupons)
