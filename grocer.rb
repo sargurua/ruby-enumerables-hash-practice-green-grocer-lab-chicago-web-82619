@@ -17,6 +17,7 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
+  if coupons.isem
 end
 
 def apply_clearance(cart)
