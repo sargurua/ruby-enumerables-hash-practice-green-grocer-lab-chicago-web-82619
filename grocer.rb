@@ -3,6 +3,7 @@ def consolidate_cart(cart)
   return_hash = {}
   cart.each do |hash|
     hash.each do |item, attributes|
+      return_hash[item] = attributes
       
     end
   end
