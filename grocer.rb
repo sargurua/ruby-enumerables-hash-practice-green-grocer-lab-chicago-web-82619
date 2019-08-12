@@ -1,6 +1,6 @@
 def consolidate_cart(cart)
   # code here
-  cart.map()
+  cart.reduce()
 end
 
 def apply_coupons(cart, coupons)
