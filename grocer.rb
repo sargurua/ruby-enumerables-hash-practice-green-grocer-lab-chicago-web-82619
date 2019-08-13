@@ -26,7 +26,6 @@ def apply_coupons(cart, coupons)
       num_of_c = coupon[:num]
       if cart.include?(name) && cart[name][:count] >= num_of_c
         new_cart[name][:count] -= num_of_c
-      end
         if new_cart["#{name} W/COUPON"]
           new_cart["#{name} W/COUPON"][:count] += 1
         else
@@ -35,10 +34,11 @@ def apply_coupons(cart, coupons)
             :clearance => new_cart[name][:clearance],
             :count => 1
           }
-       end
-     end
-   end
-
+        end
+      end
+    end
+    return new_cart
+  end
 
 def apply_clearance(cart)
   # code here
