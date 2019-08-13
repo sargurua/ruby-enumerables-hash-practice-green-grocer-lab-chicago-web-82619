@@ -20,10 +20,13 @@ def apply_coupons(cart, coupons)
   if coupons.empty?
     return cart
   else
+    item_name = coupons[:item]
+    item_count = coupons[:num]
     coupons.each do |i|
-      if cart.include?(coupons[:item]) && cart[coupons[:item]][:count] >= coupons[:num]
-        
-        
+      if cart.include?(item_name) && cart[item_name][:count] >= item_count
+        cart[item_name] -= item_count
+        cart["#{item_name} W/COUPON"]
+      end
     end
   end
 end
