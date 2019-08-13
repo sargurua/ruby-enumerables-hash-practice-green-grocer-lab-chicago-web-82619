@@ -55,6 +55,6 @@ def checkout(cart, coupons)
   new_cart = apply_clearance(new_cart,clearance)
   sum = 0
   new_cart.each do |name, hash|
-    sum += cart[hash]
+    sum += cart[hash][:price] * cart[:hash][:count]
   end
 end
