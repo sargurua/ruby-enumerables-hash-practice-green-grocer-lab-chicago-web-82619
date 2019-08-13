@@ -35,7 +35,7 @@ def apply_coupons(cart, coupons)
        end
      end
    end
-   return new_cart
+   new_cart
 end
 def apply_clearance(cart)
   # code here
@@ -45,7 +45,7 @@ def apply_clearance(cart)
       new_cart[item][:cost] = (cart[item][:cost] * 0.8).round(2)
     end
   end
-  return new_cart
+  new_cart
 end
 
 def checkout(cart, coupons)
