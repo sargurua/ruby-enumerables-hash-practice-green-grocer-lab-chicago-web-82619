@@ -57,4 +57,9 @@ def checkout(cart, coupons)
   new_cart.each do |name, hash|
     sum += cart[hash][:price] * cart[:hash][:count]
   end
+  
+  if sum > 100
+    sum *= .9.round(2)
+  end
+  return sum
 end
