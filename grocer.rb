@@ -26,6 +26,7 @@ def apply_coupons(cart, coupons)
       num_of_c = coupon[:num]
       if cart.include?(name) && cart[name][:count] >= num_of_c
         new_cart[name][:count] -= num_of_c
+      end
         if new_cart["#{name} W/COUPON"]
           new_cart["#{name} W/COUPON"][:count] += 1
         else
