@@ -19,19 +19,18 @@ def apply_coupons(cart, coupons)
   return cart if coupons == []
   new_cart = cart
 
-  coupons.each do |coupon|
-    name = coupon[:item] #avocado, cheese,...
-    num_of_c = coupon[:num]
-    if cart.include?(name) && cart[name][:count] >= num_of_c
-       #remove number of the new_cart's count
-       new_cart[name][:count] -= num_of_c
+  coupons.each do |current_coupon|
+    name = current_coupon[:item]
+    quantity = current_coupon[:num]
+    if cart.include?(name) && cart[name][:count] >= quantity
+       new_cart[name][:count] -= quantity
        if new_cart["#{name} W/COUPON"]
-         new_cart["#{name} W/COUPON"][:count] += coupon[:num]
+         new_cart["#{name} W/COUPON"][:count] += current_coupon[:num]
        else
          new_cart["#{name} W/COUPON"] = {
-           :price => coupon[:cost] / coupon[:num],
+           :price => current_coupon[:cost] / current_coupon[:num],
            :clearance => new_cart[name][:clearance],
-           :count => coupon[:num]
+           :count => current_coupon[:num]
          }
        end
      end
