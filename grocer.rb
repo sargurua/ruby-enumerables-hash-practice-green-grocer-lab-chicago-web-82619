@@ -42,7 +42,7 @@ def apply_clearance(cart)
   new_cart = cart
   cart.each do |item, hash|
     if hash[:clearance]
-      new_cart[item][:cost] = (cart[item][:cost] * 0.8).round(2)
+      new_cart[item][:price] = (cart[item][:price] * 0.8).round(2)
     end
   end
   new_cart
