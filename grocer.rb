@@ -16,8 +16,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  # code here
-    #doesn't break if there is no coupon
+  #doesn't break if there is no coupon
   return cart if coupons == []
 
   #set new_cart = cart so we don't have to push all the values, just change them
@@ -32,13 +31,13 @@ def apply_coupons(cart, coupons)
        new_cart[name][:count] -= num_of_c
        #increase the count when there is more items than the coupon allows
        if new_cart["#{name} W/COUPON"]
-         new_cart["#{name} W/COUPON"][:count] += coupon[name][:count]
+         new_cart["#{name} W/COUPON"][:count] += 1
        #set the name with coupon with new value
        else
          new_cart["#{name} W/COUPON"] = {
            :price => coupon[:cost],
            :clearance => new_cart[name][:clearance],
-           :count => coupon[name][:count]
+           :count => 1
          }
        end
      end
