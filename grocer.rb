@@ -35,7 +35,7 @@ def apply_coupons(cart, coupons)
        #set the name with coupon with new value
        else
          new_cart["#{name} W/COUPON"] = {
-           :price => coupon[:cost] / coupon[name][:count],
+           :price => coupon[:cost] / coupon[:num],
            :clearance => new_cart[name][:clearance],
            :count => 1
          }
