@@ -39,8 +39,11 @@ def apply_coupons(cart, coupons)
 end
 def apply_clearance(cart)
   # code here
+  new_cart = {}
   cart.each do |item, hash|
-    if hash[:clearance] 
+    if hash[:clearance]
+      new_cart
+    end
   end
 end
 
