@@ -21,7 +21,7 @@ def apply_coupons(cart, coupons)
     return cart
   else
     cart.each do |item, attributes|
-      if cart.all?{|i| }
+      
     end
   end
 end
