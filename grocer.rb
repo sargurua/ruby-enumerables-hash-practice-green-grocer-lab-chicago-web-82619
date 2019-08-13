@@ -17,10 +17,12 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
+  
   if coupons.empty?
     return cart
   else
     cart.each do |item, attributes|
+      
       
     end
   end
