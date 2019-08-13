@@ -16,6 +16,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
+  # code here
   return cart if coupons == []
   new_cart = cart
 
