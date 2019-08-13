@@ -61,5 +61,5 @@ def checkout(cart, coupons)
   if sum > 100
     sum *= (9 / 10)
   end
-  return sum
+  sum
 end
