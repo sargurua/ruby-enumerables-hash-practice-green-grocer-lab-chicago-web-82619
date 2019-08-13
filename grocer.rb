@@ -58,7 +58,7 @@ def checkout(cart, coupons)
     sum += hash[:price] * hash[:count]
   end
   
-  if sum > 100
+  if sum >= 100
     sum *= (9 / 10)
   end
   sum
