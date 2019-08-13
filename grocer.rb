@@ -59,7 +59,7 @@ def checkout(cart, coupons)
   end
   
   if sum > 100
-    sum *= .9.round(2)
+    sum *= .9
   end
   return sum
 end
