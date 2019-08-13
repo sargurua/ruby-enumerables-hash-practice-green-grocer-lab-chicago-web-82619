@@ -42,7 +42,7 @@ def apply_clearance(cart)
   new_cart = cart
   cart.each do |item, hash|
     if hash[:clearance]
-      new_cart[hash][price] = (cart[name][:price] * 0.8).round(2)
+      new_cart[item][price] = (cart[item][:price] * 0.8).round(2)
     end
   end
   return new_cart
@@ -55,7 +55,7 @@ def checkout(cart, coupons)
   new_cart = apply_clearance(new_cart,coupons)
   sum = 0
   new_cart.each do |name, hash|
-    sum += cart[hash][:price] * cart[:hash][:count]
+    sum += cart[name][:price] * cart[:hash][:count]
   end
   
   if sum > 100
