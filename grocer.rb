@@ -16,10 +16,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  #doesn't break if there is no coupon
   return cart if coupons == []
-
-  #set new_cart = cart so we don't have to push all the values, just change them
   new_cart = cart
 
   coupons.each do |coupon|
