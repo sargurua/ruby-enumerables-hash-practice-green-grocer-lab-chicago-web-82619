@@ -25,8 +25,8 @@ def apply_coupons(cart, coupons)
     item_count = coupons[:num]
     coupons.each do |i|
       if cart.include?(item_name) && cart[item_name][:count] >= item_count
-        new_cart[item_name] -= item_count
-        cart["#{item_countCOUPON"]
+        new_cart[item_name][:count] -= item_count
+        new_cart[]
       end
     end
   end
